@@ -1,0 +1,67 @@
+
+
+password: [1;40;37m
+
+
+02-MAR-16 19:21:53 - RSP, Telnet: stdin=0x00000019, stdout=0x00000019, stderr=0x00000019
+
+
+[0m
+
+
+RCST-2000>rsp board get telem
+
+
+
+
+
+Time: 02-MAR-16 19:21:55 , Ticks: 17135161 
+
+
+
+
+
+00 OK Board Telemetry 
+
+
+FPGA Version                                 $fpgaversion 30f5$
+
+
+Factory MBC Software Version                 $factorymbcversion 7.0.3.1$
+
+
+Active MBC Software Version                  $activembcversion 7.0.3.1$
+
+
+RSP Software Version                         $rspversion 06.83.01.03$
+
+
+Operational Code Compilation Date            Mar  4 2015 16:02:36
+
+
+RSP Operational Code Compilation Date        $date Mar  4 2015, 15:59:01$
+
+
+OPER Software Version                        $operversion 60.83.01.03 $
+
+
+Part Number                                  $partnum 569000$
+
+
+Hardware Version                             $hversion 4305$
+
+
+Synth Deviation                              $synthdev 0.0$
+
+
+Serial Number                                $serial 0411440738$
+
+
+Last reset cause                             $Power up$
+
+
+VSAT Up Time                                 $001 days 23:35:51$
+
+
+
+
