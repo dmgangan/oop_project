@@ -36,7 +36,6 @@ class oids(object):														# Class that handles XML parsing/printing
 		s=0
 		wb = xlwt.Workbook()
 		ws = wb.add_sheet('OIDs')
-		
 		font0 = xlwt.Font()
 		font0.bold = True
 		style1 = xlwt.XFStyle()
@@ -57,9 +56,18 @@ class oids(object):														# Class that handles XML parsing/printing
 					s+=1
 					ws.write(s, 0, elements[0])
 					ws.write(s, 1, elements[1])					
-			wb.save(exc_file+'.xls')
+
+		elif type(categories) is not list:						#In case we need to print one category (not list of them or all)
+			ws.write(s, 0, categories.upper(), style1)
+			for elements in self.oid[item].items():
+				s+=1
+				ws.write(s, 0, elements[0])
+				ws.write(s, 1, elements[1])
+		ws.col(0).width=int(30*256)
+		ws.col(1).width=int(20*256)
+		wb.save(exc_file+'.xls')
 		print "### Saved ###"
-		raw_input()			# Need to write for single category!!!
+		raw_input()			
 
 	def txt(self, txt_file):
 		for category in self.cat_list:
@@ -136,7 +144,7 @@ def main():
 
 	m=menu()
 	temp=oids(file.handle)
-	menu_lst=['On the screen','To the excel','To the .txt','Exit']
+	menu_lst=['On the screen','To the excel','To the .txt','Exit',':about']
 	mmenu=menu()
 	chose=0
 
@@ -161,8 +169,13 @@ def main():
 
 		elif chose==menu_lst[3]:
 			exit()
-			
-	else: pass
+
+		elif chose==menu_lst[4]:
+			print "SEII component template XML parser\n"
+			print "Source: https://github.com/gangand/oop_project\n"
+			raw_input()
+
+		else: pass
 
 if __name__ == '__main__':
     main()
